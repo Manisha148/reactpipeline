@@ -6,4 +6,4 @@ phases:
   build:
     commands:
       - echo Test Diego!!!
-      - echo ${REACT_APP_SECRET_PASSWORD}
+      - echo $REACT_APP_SECRET_PASSWORD
