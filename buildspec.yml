@@ -1,5 +1,8 @@
 version: 1
 frontend:
+  env:
+    secrets-manager:
+      REACT_APP_SECRET_PASSWORD: "test/app/Diego:secret_password"
   phases:
     preBuild:
       commands:
