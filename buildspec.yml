@@ -7,4 +7,4 @@ phases:
     commands:
       - export REACT_APP_SECRET_PASSWORD=$REACT_APP_SECRET_PASSWORD_PARAM
       - echo Test Diego!!!
-      - echo ${REACT_APP_SECRET_PASSWORD}
+      - echo $REACT_APP_SECRET_PASSWORD
