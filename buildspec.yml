@@ -1,0 +1,22 @@
+version: 0.2
+env:
+  secrets-manager:
+    REACT_APP_SECRET_PASSWORD: "test/app/Diego:secret_password"
+phases:
+  pre_build:
+    commands:
+      - yarn
+  build:
+    commands:
+      - yarn build
+  post_build:
+    commands:
+      - echo Test Diego!!!
+      - echo ${REACT_APP_SECRET_PASSWORD}
+# Artifacts will specify what files will be uploaded to s3
+# This will include all files within the "build" folder
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no
+  base-directory: build
