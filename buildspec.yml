@@ -1,11 +1,15 @@
 version: 0.2
 env:
+  variables:
+    REACT_APP_SECRET_PASSWORD2: "password2"
   secrets-manager:
     REACT_APP_SECRET_PASSWORD: "test/app/Diego:secret_password"
   exported-variables:
     - REACT_APP_SECRET_PASSWORD
+    - REACT_APP_SECRET_PASSWORD2
 phases:
   build:
     commands:
       - echo Test Diego!!!
       - echo ${REACT_APP_SECRET_PASSWORD}
+      - echo ${REACT_APP_SECRET_PASSWORD2}
