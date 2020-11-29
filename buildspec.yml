@@ -1,10 +1,6 @@
 version: 0.2
-env:
-  parameter-store:
-    REACT_APP_SECRET_PASSWORD_PARAM: /CodeBuild/SECRET_PASSWORD
 phases:
   build:
     commands:
-      - export REACT_APP_SECRET_PASSWORD=$REACT_APP_SECRET_PASSWORD_PARAM
       - echo Test Diego!!!
       - echo $REACT_APP_SECRET_PASSWORD
