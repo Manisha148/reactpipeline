@@ -1,0 +1,28 @@
+version: 0.2
+env:
+  secrets-manager:
+    REACT_APP_PASSWORD3: "staging/customer-portal/passwords:password3"
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+  pre_build:
+    commands:
+      - echo Test Diego!!!
+      - echo Password 1
+      - echo $REACT_APP_PASSWORD1
+      - echo Password 2
+      - echo $REACT_APP_PASSWORD2
+      - echo Password 3
+      - echo $REACT_APP_PASSWORD3
+      - npm install
+  build:
+    commands:
+      - npm run build
+artifacts:
+  files:
+    - "**/*"
+  base-directory: build
+cache:
+  paths:
+    - '/root/.npm/**/*'
