@@ -14,7 +14,6 @@ phases:
       - echo Password 3
       - echo $REACT_APP_PASSWORD3
       - npm install
-      - npm run clean
   build:
     commands:
       - npm run build
