@@ -1,6 +1,10 @@
 version: 0.2
+
 phases:
-  build:
+  install:
+    runtime-versions:
+      nodejs: 10
+  pre_build:
     commands:
       - echo Test Diego!!!
       - echo Password 1
@@ -9,3 +13,15 @@ phases:
       - echo $REACT_APP_PASSWORD2
       - echo Password 3
       - echo $REACT_APP_PASSWORD3
+      - npm install
+      - npm run clean
+  build:
+    commands:
+      - npm run build
+artifacts:
+  files:
+    - "**/*"
+  base-directory: build
+cache:
+  paths:
+    - '/root/.npm/**/*'
