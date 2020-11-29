@@ -1,6 +1,7 @@
 version: 0.2
 env:
   secrets-manager:
+    REACT_APP_PASSWORD2: "staging/customer-portal/passwords:password2"
     REACT_APP_PASSWORD3: "staging/customer-portal/passwords:password3"
 phases:
   install:
