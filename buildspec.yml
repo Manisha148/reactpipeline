@@ -13,8 +13,6 @@ phases:
       - echo $REACT_APP_PASSWORD1
       - echo Password 2
       - echo $REACT_APP_PASSWORD2
-      - echo Password 3
-      - echo $REACT_APP_PASSWORD3
       - npm install
   build:
     commands:
